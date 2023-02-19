@@ -11,7 +11,17 @@ const data = [
 ];
 
 export const Acomplishments = () => (
-    <div>
-        Acomplishments
-    </div>
+    <Section>
+        <SectionTitle>Personal Acomplishments</SectionTitle>
+        <Boxes>
+            {data.map((card, index) => (
+                <Box key={index}>
+                    <BoxNum>{card.number}</BoxNum>
+                    <BoxText>{card.text}</BoxText>
+                </Box>
+            ))}
+        </Boxes>
+        <SectionDivider/>
+    </Section>
+    
 );
