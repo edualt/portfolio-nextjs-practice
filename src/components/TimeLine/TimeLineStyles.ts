@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-export const CarouselContainer = styled.ul`
+export const CarouselContainer = styled.ul<{ref: any}>`
   max-width: 1040px;
   background: #0F1624;
   padding: 0rem;
@@ -44,7 +44,7 @@ export const CarouselMobileScrollNode = styled.div`
   }
 `
 
-export const CarouselItem = styled.div`
+export const CarouselItem = styled.div<{index: any, active: any}>`
   background: #0F1624;
   border-radius: 3px;
   max-width: 196px;
@@ -135,7 +135,7 @@ export const CarouselButtons = styled.div`
   }
 `
 
-export const CarouselButton = styled.button`
+export const CarouselButton = styled.button<{index: any, active: any}>`
   box-sizing: border-box;
   background: none;
   padding: 4px;
@@ -150,7 +150,7 @@ export const CarouselButton = styled.button`
   }
 `
 
-export const CarouselButtonDot = styled.div`
+export const CarouselButtonDot = styled.div<{active: any}>`
   background-color: white;
   border-radius: 10px;
   margin: auto;
