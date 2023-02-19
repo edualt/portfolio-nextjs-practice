@@ -8,6 +8,7 @@ interface SectionProps {
 
 interface SectionTitleProps {
     main?: boolean;
+    center?: boolean;
 }
 
 interface SectionDividerProps {
@@ -33,6 +34,7 @@ interface LinkIconImgProps {
     large?: boolean;
     nav?: boolean;
 }
+
 
 export const Section = styled.section<SectionProps>`
   display: ${(props) => props.grid ? "grid" : "flex" };
