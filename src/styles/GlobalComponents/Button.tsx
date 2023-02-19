@@ -2,7 +2,7 @@ import React from "react";
 
 import { ButtonBack, ButtonFront } from "./index";
 
-interface ButtonProps {
+interface props {
     alt?: string;
     form?: string;
     disabled?: boolean;
@@ -10,12 +10,12 @@ interface ButtonProps {
     children: React.ReactNode;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = (props: props) => (
     <ButtonBack alt={props.alt} form={props.form} disabled={props.disabled}>
         <ButtonFront alt={props.alt} onClick={props.onClick} disabled={props.disabled}>
             {props.children}
         </ButtonFront>
     </ButtonBack>
-}
+)
 
 export default Button;
